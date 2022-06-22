@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class GetPriceController extends Controller
 {
-    public function __invoke (Request $request, Client $client)
+    public function __invoke(Request $request, Client $client)
     {
         $url = 'https://test.api.amadeus.com/v1/shopping/flight-offers/pricing';
         $access_token = 'xcx0kYxE42LhXIZGmI6XTjmaPE7o';

@@ -23,6 +23,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/init', AccessTokenController::class);
-Route::post('/search', FlightSearchController::class);
+
+Route::get('/generate', 'App\Http\Controllers\AccessTokenController@generate');
+// Route::post('/search', FlightSearchController::class);
+Route::get('/search', 'App\Http\Controllers\FlightSearchController@search');
 Route::post('/price', GetPriceController::class);
 Route::post('/order', OrderFlightController::class);
